@@ -3,7 +3,7 @@ name: Deploy Static Website
 on:
   push:
     branches:
-      - main  # Change if your default branch is different
+      - main  # Change this if your default branch is different
 
 permissions:
   contents: read
@@ -24,8 +24,8 @@ jobs:
       - name: Upload Static Files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./  # Upload all static files in the root directory
-          name: github-pages  # Explicit artifact name
+          path: .  # Upload everything in the root directory
+          name: github-pages  # Name the artifact explicitly
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
