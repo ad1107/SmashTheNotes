@@ -24,10 +24,10 @@ jobs:
       - name: Upload Static Files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .  # Upload everything in the root directory
-          name: github-pages  # Name must match deployment step
+          path: .  # Upload all static files
+          name: github-pages  # This must match the deployment step
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
         with:
-          artifact_name: github-pages  # Ensure the artifact name matches
+          artifact_name: github-pages  # Ensure artifact name matches the upload step
