@@ -1,1 +1,3 @@
-# WIP. Soon™
+# Smash The Notes
+## Simple and cleaner version from the forked one.
+Featuring 3 modes, timer, keybinds,....
