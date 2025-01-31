@@ -3,12 +3,12 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
 (function(w) {
     function getJsonI18N() {
         return $.ajax({
-            url: `./static/i18n/zh.json`,
+            url: `./static/lang/en.json`,
             dataType: 'json',
             method: 'GET',
             async: false,
             success: data => res = data,
-            error: () => alert('找不到語言文件: ' + lang)
+            error: () => alert('Language file not found: ' + lang)
         }).responseJSON
     }
 
@@ -502,7 +502,7 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
                 _gameSettingNum = 20;
                 $('#gameTime').val('');
                 cookie('gameTime', 20);
-                alert('秒數必須為數字，且不可低於 0，已自動修正遊戲時間為 20 秒')
+                alert('The number of seconds must be a numeric value and cannot be less than 0.\nThe game time has been automatically adjusted to 20 seconds.')
             }
 
             $('#gameTime').val(cookie('gameTime'));
